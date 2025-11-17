@@ -714,11 +714,7 @@ body {
   }
 }
 
-/* ============================================
-   SYSTÈME RESPONSIVE COMPLET POUR LA GALERIE
-   ============================================ */
 
-/* Desktop large (> 1200px) - 3 colonnes, images pleine largeur */
 @media (min-width: 1201px) {
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -731,7 +727,6 @@ body {
   }
 }
 
-/* Desktop moyen / Tablette landscape (1025px - 1200px) - 3 colonnes, images pleine largeur */
 @media (min-width: 1025px) and (max-width: 1200px) {
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -744,7 +739,6 @@ body {
   }
 }
 
-/* Tablette landscape / Desktop petit (901px - 1024px) - 3 colonnes, images pleine largeur */
 @media (min-width: 901px) and (max-width: 1024px) {
   .gallery-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -757,7 +751,6 @@ body {
   }
 }
 
-/* Tablette portrait (768px - 900px) - 2 colonnes, images réduites */
 @media (min-width: 768px) and (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -774,7 +767,6 @@ body {
   }
 }
 
-/* Mobile landscape / Petite tablette (481px - 767px) - 2 colonnes, images réduites */
 @media (min-width: 481px) and (max-width: 767px) {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -791,7 +783,6 @@ body {
   }
 }
 
-/* Mobile portrait (< 480px) - 1 colonne, images réduites */
 @media (max-width: 480px) {
   .gallery-grid {
     grid-template-columns: 1fr;
@@ -812,7 +803,6 @@ body {
   }
 }
 
-/* Mobile très petit (< 360px) - images encore plus petites */
 @media (max-width: 360px) {
   .gallery-item img {
     width: 80%;
@@ -1102,7 +1092,6 @@ body {
   border: 6px solid rgba(255,255,255,0.04);
 }
 
-/* Hide caption for profile images */
 .lightbox-overlay.open .lightbox-content.profile ~ .lightbox-caption {
   display: none !important;
 }
