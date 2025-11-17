@@ -1,6 +1,4 @@
-// script.js - lightbox and basic page interactions
 document.addEventListener('DOMContentLoaded', function () {
-  // Lightbox setup
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
   overlay.innerHTML = `
@@ -29,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let fixedGalleryWidth = null;
   let fixedGalleryHeight = null;
 
-  // Preload helper for adjacent images
   function preloadIndex(idx) {
     if (!currentGroup || currentGroup.length === 0) return;
     const i = ((idx % currentGroup.length) + currentGroup.length) % currentGroup.length;
@@ -40,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Render clickable dot indicators
   function renderIndicators() {
     if (!indicatorsEl) return;
     indicatorsEl.innerHTML = '';
@@ -59,11 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function openLightbox(src, alt, type, caption) {
-    // type: 'profile' or 'gallery'
     imgEl.src = src;
     imgEl.alt = alt || '';
     captionEl.textContent = caption || alt || '';
-    // reset classes
     const content = overlay.querySelector('.lightbox-content');
     content.className = 'lightbox-content';
     if (type === 'profile') {
@@ -73,13 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
       content.classList.add('gallery');
       imgEl.style.objectFit = 'contain';
     }
-    // Reset inline sizing
     content.style.width = '';
     content.style.height = '';
     imgEl.style.width = '';
     imgEl.style.height = '';
 
-    // update indicators & caption
     if (type === 'profile') {
       if (indicatorsEl) indicatorsEl.style.display = 'none';
     } else {
@@ -87,12 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
       renderIndicators();
     }
 
-    // prepare transition
     const contentEl = content;
     contentEl.classList.add('transitioning');
     imgEl.style.opacity = '0';
 
-    // Image load handler: compute sizing and reveal
     imgEl.onload = function () {
       try {
         if (contentEl.classList.contains('gallery')) {
@@ -106,13 +96,11 @@ document.addEventListener('DOMContentLoaded', function () {
           const displayW = Math.round(naturalW * scale);
           const displayH = Math.round(naturalH * scale);
           
-          // Store fixed dimensions on first load (index 0)
           if (currentIndex === 0 && !fixedGalleryWidth) {
             fixedGalleryWidth = displayW;
             fixedGalleryHeight = displayH;
           }
           
-          // Use fixed dimensions if available, otherwise use calculated
           const w = fixedGalleryWidth || displayW;
           const h = fixedGalleryHeight || displayH;
           
@@ -121,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
           contentEl.style.width = w + 'px';
           contentEl.style.height = h + 'px';
         } else {
-          // profile: fill circular container
           imgEl.style.width = '100%';
           imgEl.style.height = '100%';
           contentEl.style.width = '';
@@ -134,11 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         contentEl.style.height = '';
       }
 
-      // preload adjacent images for instant navigation
       preloadIndex(currentIndex - 1);
       preloadIndex(currentIndex + 1);
 
-      // reveal with a tiny delay for smoothness
       setTimeout(() => {
         contentEl.classList.remove('transitioning');
         imgEl.style.opacity = '1';
@@ -148,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
 
-    // Show/hide nav depending on group size
     if (currentGroup && currentGroup.length > 1 && type === 'gallery') {
       prevBtn.style.display = 'inline-flex';
       nextBtn.style.display = 'inline-flex';
@@ -163,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
     imgEl.src = '';
     captionEl.textContent = '';
     document.body.style.overflow = '';
-    // Reset fixed gallery dimensions for next opening
     fixedGalleryWidth = null;
     fixedGalleryHeight = null;
   }
@@ -173,8 +156,6 @@ document.addEventListener('DOMContentLoaded', function () {
     currentIndex = ((idx % currentGroup.length) + currentGroup.length) % currentGroup.length;
     const el = currentGroup[currentIndex];
     if (!el) return;
-    // reuse openLightbox sizing path but avoid recomputing group
-    // transition out
     const contentEl = overlay.querySelector('.lightbox-content');
     contentEl.classList.add('transitioning');
     imgEl.style.opacity = '0';
@@ -182,17 +163,13 @@ document.addEventListener('DOMContentLoaded', function () {
     imgEl.src = el.src;
     imgEl.alt = el.alt || '';
     captionEl.textContent = el.caption || el.alt || '';
-    // update indicators and preload neighbors
     renderIndicators();
     preloadIndex(currentIndex - 1);
     preloadIndex(currentIndex + 1);
-    // ensure gallery style
     const content = overlay.querySelector('.lightbox-content');
     content.className = 'lightbox-content gallery';
     imgEl.style.objectFit = 'contain';
-    // once image loads, sizing will be applied by onload handler
     if (imgEl.complete && imgEl.naturalWidth) {
-      // force sizing recalculation
       const ev = new Event('load');
       imgEl.dispatchEvent(ev);
     }
@@ -202,15 +179,12 @@ document.addEventListener('DOMContentLoaded', function () {
     nextBtn.style.display = currentGroup.length > 1 ? 'inline-flex' : 'none';
   }
 
-  // delegate click on images with data-lightbox
   document.body.addEventListener('click', function (e) {
     const target = e.target.closest('img[data-lightbox]');
     if (target) {
       e.preventDefault();
       const t = (target.dataset.lightbox || '').toLowerCase();
-      // build group based on data-lightbox value
       currentGroupName = t || '';
-      // Get all images and their captions
       currentGroup = Array.from(document.querySelectorAll(`img[data-lightbox="${currentGroupName}"]`)).map((img) => {
         const figure = img.closest('figure');
         const caption = figure ? figure.querySelector('figcaption') : null;
@@ -221,21 +195,17 @@ document.addEventListener('DOMContentLoaded', function () {
           caption: caption ? caption.textContent : ''
         };
       });
-      // find index of clicked image within group
       currentIndex = currentGroup.findIndex((i) => i.src === target.src);
       if (currentIndex < 0) currentIndex = 0;
-      // treat 'profile' specially, others as gallery
       const type = currentGroupName === 'profile' ? 'profile' : 'gallery';
       openLightbox(currentGroup[currentIndex].src, currentGroup[currentIndex].alt || '', type, currentGroup[currentIndex].caption);
     }
   });
 
-  // close interactions
   overlay.addEventListener('click', function (e) {
     if (e.target === overlay || e.target === closeBtn) closeLightbox();
   });
 
-  // Touch / swipe support for mobile
   let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
   overlay.addEventListener('touchstart', function (e) {
     if (!e.touches || e.touches.length === 0) return;
@@ -250,7 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const dx = touch.clientX - touchStartX;
     const dy = touch.clientY - touchStartY;
     const dt = Date.now() - touchStartTime;
-    // require horizontal swipe larger than vertical movement and threshold
     if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) && dt < 800) {
       if (dx > 0) {
         showImageByIndex(currentIndex - 1);
@@ -260,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }, { passive: true });
 
-  // Prev/Next button handlers
   prevBtn.addEventListener('click', function (e) {
     e.stopPropagation();
     if (!currentGroup || currentGroup.length === 0) return;
@@ -279,24 +247,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (e.key === 'ArrowRight') return showImageByIndex(currentIndex + 1);
   });
 
-  // small utility: set current year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
-// Système de traduction
-// If user previously selected a language, use it. Otherwise determine later
-// from the browser preferences (so we avoid forcing 'fr' on first visit).
 let currentLanguage = localStorage.getItem("language") || null;
 let translations = {};
 
-// Charger les traductions
 async function loadTranslations() {
   try {
-    // Prefer inline translations (works with file://), fallback to fetch
     const inline = document.getElementById('translations');
     if (inline && inline.textContent.trim().length > 0) {
       translations = JSON.parse(inline.textContent);
-      // If no language stored yet, detect browser language
       if (!currentLanguage) {
         currentLanguage = detectBrowserLanguage();
       }
@@ -315,7 +276,6 @@ async function loadTranslations() {
   }
 }
 
-// Charger et afficher le CV (si présent)
 async function loadCV() {
   try {
     if (!translations || !translations[currentLanguage]) {
@@ -328,7 +288,6 @@ async function loadCV() {
     if (!container) return;
     container.innerHTML = '';
 
-    // Nom et titre
     const name = t['cv-name'] || '';
     const title = t['cv-title'] || '';
     if (name || title) {
@@ -338,7 +297,6 @@ async function loadCV() {
       container.appendChild(h);
     }
 
-    // Résumé
     if (t['cv-summary']) {
       const p = document.createElement('p');
       p.className = 'resume-summary';
@@ -346,7 +304,6 @@ async function loadCV() {
       container.appendChild(p);
     }
 
-    // Highlights
     const highlights = [];
     for (let i = 1; i <= 4; i++) {
       const key = `cv-highlight-${i}`;
@@ -363,11 +320,10 @@ async function loadCV() {
       container.appendChild(ul);
     }
 
-    // Expériences
     const experiences = [];
     for (let i = 1; i <= 4; i++) {
       const role = t[`cv-exp-${i}-role`];
-      if (!role) continue; // Skip si pas de traduction
+      if (!role) continue;
       
       const exp = {
         role: role,
@@ -376,7 +332,6 @@ async function loadCV() {
         details: []
       };
       
-      // Détails
       for (let j = 1; j <= 4; j++) {
         const detail = t[`cv-exp-${i}-detail-${j}`];
         if (detail) exp.details.push(detail);
@@ -433,11 +388,10 @@ async function loadCV() {
       container.appendChild(sec);
     }
 
-    // Formations
     const educations = [];
     for (let i = 1; i <= 3; i++) {
       const degree = t[`cv-edu-${i}-degree`];
-      if (!degree) continue; // Skip si pas de traduction
+      if (!degree) continue;
       
       educations.push({
         degree: degree,
@@ -486,12 +440,10 @@ async function loadCV() {
   }
 }
 
-// Appliquer une langue
 function setLanguage(lang) {
   currentLanguage = lang;
   localStorage.setItem("language", lang);
   
-  // Mettre à jour tous les éléments avec data-i18n
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.dataset.i18n;
     if (translations[lang] && translations[lang][key]) {
@@ -499,7 +451,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Mettre à jour les placeholders
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.dataset.i18nPlaceholder;
     if (translations[lang] && translations[lang][key]) {
@@ -507,7 +458,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Mettre à jour les aria-label
   document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
     const key = el.dataset.i18nAriaLabel;
     if (translations[lang] && translations[lang][key]) {
@@ -515,7 +465,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Mettre à jour les alt
   document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
     const key = el.dataset.i18nAlt;
     if (translations[lang] && translations[lang][key]) {
@@ -523,7 +472,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Mettre à jour le bouton actif
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.classList.remove("active");
     if (btn.dataset.lang === lang) {
@@ -533,11 +481,9 @@ function setLanguage(lang) {
 
   document.documentElement.lang = lang;
   
-  // Recharger le CV avec la nouvelle langue
   loadCV();
 }
 
-// Detect browser language (prefer 'fr' or 'en')
 function detectBrowserLanguage() {
   const nav = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || 'en'];
   for (const l of nav) {
@@ -545,11 +491,9 @@ function detectBrowserLanguage() {
     if (code.startsWith('fr')) return 'fr';
     if (code.startsWith('en')) return 'en';
   }
-  // fallback
   return 'fr';
 }
 
-// Événements des boutons de langue
 function setupLanguageSwitcher() {
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -558,23 +502,17 @@ function setupLanguageSwitcher() {
   });
 }
 
-// (Contact form removed) no client-side mailto assembly required anymore
-
-// Afficher l'année dans le footer
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // Charger les traductions
     loadTranslations().then(() => {
     setupLanguageSwitcher();
-    // Load CV data if present
     loadCV();
   });
 
-  // Animation fade-in on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -591,7 +529,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-  // Mobile nav
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
 

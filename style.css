@@ -32,7 +32,6 @@ body {
   color: var(--text);
 }
 
-
 .container {
   width: 100%;
   max-width: 1120px;
@@ -47,7 +46,6 @@ body {
 .section-alt {
   background: radial-gradient(circle at top, #020617 0, #050816 60%, #020617 100%);
 }
-
 
 .site-header {
   position: sticky;
@@ -112,7 +110,6 @@ body {
   width: 100%;
 }
 
-
 .nav-toggle {
   display: none;
   background: none;
@@ -129,7 +126,6 @@ body {
   border-radius: 999px;
   background: var(--text);
 }
-
 
 .hero {
   padding: 5.5rem 0 4.5rem;
@@ -159,6 +155,7 @@ body {
 
 .accent {
   background: linear-gradient(120deg, #38bdf8, #a855f7, #22c55e);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -253,7 +250,6 @@ body {
   margin-bottom: 0.7rem;
 }
 
-
 .hero-card-title {
   display: flex;
   flex-direction: column;
@@ -308,7 +304,6 @@ body {
   color: #e0f2fe;
 }
 
-
 .section-header {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -324,7 +319,6 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
 
 .about-grid {
   display: grid;
@@ -363,7 +357,6 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
 
 .about-avatar-card {
   display: flex;
@@ -406,7 +399,6 @@ body {
   color: var(--muted);
 }
 
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -440,7 +432,6 @@ body {
   color: var(--muted);
   font-size: 0.9rem;
 }
-
 
 .projects-grid {
   display: grid;
@@ -537,7 +528,6 @@ body {
   text-decoration: underline;
 }
 
-
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -585,7 +575,6 @@ body {
   color: var(--muted);
   text-align: center;
 }
-
 
 .contact-grid {
   display: grid;
@@ -670,7 +659,6 @@ body {
   transform: scale(1.1);
 }
 
-
 .site-footer {
   border-top: 1px solid rgba(15, 23, 42, 0.9);
   padding: 1.3rem 0 1.5rem;
@@ -678,7 +666,6 @@ body {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
 
 .fade-in {
   opacity: 0;
@@ -690,7 +677,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 @media (max-width: 900px) {
   .hero-grid {
@@ -850,7 +836,6 @@ body {
   }
 }
 
-
 .language-switcher {
   display: flex;
   gap: 0.4rem;
@@ -880,7 +865,6 @@ body {
   border-color: transparent;
   color: white;
 }
-
 
 .contact-info-box {
   margin-top: 2rem;
@@ -946,7 +930,6 @@ body {
   margin-top: 0.5rem;
 }
 
-
 @media (max-width: 700px) {
   .language-switcher {
     gap: 0.3rem;
@@ -957,7 +940,6 @@ body {
     font-size: 0.7rem;
   }
 }
-
 
 .resume-content {
   max-width: 760px;
@@ -1040,7 +1022,6 @@ body {
   font-size: 0.85rem;
   color: var(--muted);
 }
-
 
 .lightbox-overlay {
   position: fixed;
@@ -1264,7 +1245,6 @@ body {
   opacity: 0;
   transform: scale(0.995);
 }
-
 
 .olyfit-focus-grid {
   display: grid;
