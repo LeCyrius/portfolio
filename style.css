@@ -562,6 +562,34 @@ body {
   }
 }
 
+/* Tablettes en portrait (iPad) - réduire la taille des images */
+@media (min-width: 701px) and (max-width: 900px) and (orientation: portrait) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+  }
+
+  .gallery-item img {
+    width: 60%;
+    max-width: 300px;
+    min-height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .gallery-item figcaption {
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+}
+
 .gallery-item {
   background: rgba(15, 23, 42, 0.95);
   border-radius: 16px;
