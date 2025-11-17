@@ -32,7 +32,6 @@ body {
   color: var(--text);
 }
 
-/* Layout */
 
 .container {
   width: 100%;
@@ -49,7 +48,6 @@ body {
   background: radial-gradient(circle at top, #020617 0, #050816 60%, #020617 100%);
 }
 
-/* Header */
 
 .site-header {
   position: sticky;
@@ -114,7 +112,6 @@ body {
   width: 100%;
 }
 
-/* Mobile nav toggle */
 
 .nav-toggle {
   display: none;
@@ -133,7 +130,6 @@ body {
   background: var(--text);
 }
 
-/* Hero */
 
 .hero {
   padding: 5.5rem 0 4.5rem;
@@ -257,7 +253,6 @@ body {
   margin-bottom: 0.7rem;
 }
 
-/* titre + logo dans la carte hero */
 
 .hero-card-title {
   display: flex;
@@ -313,7 +308,6 @@ body {
   color: #e0f2fe;
 }
 
-/* Section header */
 
 .section-header {
   text-align: center;
@@ -331,7 +325,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* About */
 
 .about-grid {
   display: grid;
@@ -371,7 +364,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* About avatar card */
 
 .about-avatar-card {
   display: flex;
@@ -414,7 +406,6 @@ body {
   color: var(--muted);
 }
 
-/* Skills */
 
 .skills-grid {
   display: grid;
@@ -450,7 +441,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Projects */
 
 .projects-grid {
   display: grid;
@@ -547,47 +537,11 @@ body {
   text-decoration: underline;
 }
 
-/* Olyfit gallery */
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
-}
-
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
-}
-
-/* Tablettes en portrait (iPad) - réduire la taille des images */
-@media (min-width: 701px) and (max-width: 900px) and (orientation: portrait) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.8rem;
-  }
-
-  .gallery-item img {
-    width: 60%;
-    max-width: 300px;
-    min-height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-
-  .gallery-item figcaption {
-    text-align: center;
-    margin-top: 0.6rem;
-  }
 }
 
 .gallery-item {
@@ -598,6 +552,10 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.65);
   overflow: hidden;
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .gallery-item:hover {
@@ -607,30 +565,27 @@ body {
 }
 
 .gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+  background: rgba(15, 23, 42, 0.5);
   transition: transform 0.3s ease-out;
+  margin: 0 auto;
 }
 
 .gallery-item:hover img {
   transform: scale(1.05);
 }
 
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 200px;
-  border-radius: 12px;
-  object-fit: cover;
-  background: rgba(15, 23, 42, 0.5);
-}
-
 .gallery-item figcaption {
-  margin-top: 0.45rem;
+  margin-top: 0.6rem;
   font-size: 0.8rem;
   color: var(--muted);
+  text-align: center;
 }
 
-/* Contact */
 
 .contact-grid {
   display: grid;
@@ -715,7 +670,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Footer */
 
 .site-footer {
   border-top: 1px solid rgba(15, 23, 42, 0.9);
@@ -725,7 +679,6 @@ body {
   color: var(--muted);
 }
 
-/* Animations (scroll) */
 
 .fade-in {
   opacity: 0;
@@ -738,7 +691,6 @@ body {
   transform: translateY(0);
 }
 
-/* Responsive */
 
 @media (max-width: 900px) {
   .hero-grid {
@@ -760,49 +712,117 @@ body {
   .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
+}
 
-  .gallery-item {
-    grid-template-columns: 1fr;
+/* ============================================
+   SYSTÈME RESPONSIVE COMPLET POUR LA GALERIE
+   ============================================ */
+
+/* Desktop large (> 1200px) - 3 colonnes, images pleine largeur */
+@media (min-width: 1201px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Desktop moyen / Tablette landscape (1025px - 1200px) - 3 colonnes, images pleine largeur */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Tablette landscape / Desktop petit (901px - 1024px) - 3 colonnes, images pleine largeur */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Tablette portrait (768px - 900px) - 2 colonnes, images réduites */
+@media (min-width: 768px) and (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 
-  .gallery-item figcaption {
-    font-size: 0.95rem;
+  .gallery-item {
+    padding: 0.8rem;
   }
 
+  .gallery-item img {
+    width: 70%;
+    max-width: 350px;
+  }
+}
+
+/* Mobile landscape / Petite tablette (481px - 767px) - 2 colonnes, images réduites */
+@media (min-width: 481px) and (max-width: 767px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .gallery-item {
+    padding: 0.8rem;
+  }
+
+  .gallery-item img {
+    width: 75%;
+    max-width: 300px;
+  }
+}
+
+/* Mobile portrait (< 480px) - 1 colonne, images réduites */
+@media (max-width: 480px) {
   .gallery-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
 
+  .gallery-item {
+    padding: 0.8rem;
+  }
+
   .gallery-item img {
-    min-height: 250px;
+    width: 70%;
+    max-width: 280px;
+  }
+
+  .gallery-item figcaption {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile très petit (< 360px) - images encore plus petites */
+@media (max-width: 360px) {
+  .gallery-item img {
+    width: 80%;
+    max-width: 240px;
   }
 }
 
 @media (max-width: 700px) {
   .nav-toggle {
     display: flex;
-  }
-
-  .gallery-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.8rem;
-  }
-
-  .gallery-item img {
-    width: 65%;
-    max-width: 280px;
-    min-height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-
-  .gallery-item figcaption {
-    text-align: center;
-    margin-top: 0.6rem;
   }
 
   .nav {
@@ -838,14 +858,8 @@ body {
   .skills-grid {
     grid-template-columns: minmax(0, 1fr);
   }
-
-  .gallery-item {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
 }
 
-/* Language Switcher */
 
 .language-switcher {
   display: flex;
@@ -877,7 +891,6 @@ body {
   color: white;
 }
 
-/* Contact Form */
 
 .contact-info-box {
   margin-top: 2rem;
@@ -943,7 +956,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* Responsive pour mobile */
 
 @media (max-width: 700px) {
   .language-switcher {
@@ -956,7 +968,6 @@ body {
   }
 }
 
-/* Resume / CV section */
 
 .resume-content {
   max-width: 760px;
@@ -1040,7 +1051,7 @@ body {
   color: var(--muted);
 }
 
-/* Lightbox styles */
+
 .lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -1081,7 +1092,6 @@ body {
   opacity: 1;
 }
 
-/* Profile: circular, larger, shows site in background */
 .lightbox-content.profile {
   width: min(540px, 65vw, 65vh);
   height: min(540px, 65vw, 65vh);
@@ -1104,9 +1114,7 @@ body {
   display: block;
 }
 
-/* Gallery: preserve aspect ratio, contain image inside rounded rectangle */
 .lightbox-content.gallery {
-  /* Allow JS to size the container based on image aspect ratio and viewport */
   max-width: 50vw;
   max-height: 84vh;
   border-radius: 14px;
@@ -1155,7 +1163,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Lightbox navigation buttons */
 .lightbox-prev,
 .lightbox-next {
   position: fixed;
@@ -1214,7 +1221,6 @@ body {
   }
 }
 
-/* Counter */
 .lightbox-counter {
   position: fixed;
   bottom: 2.2rem;
@@ -1230,7 +1236,6 @@ body {
   border: 1px solid rgba(255,255,255,0.04);
 }
 
-/* Indicator dots (replace numeric counter) */
 .lightbox-indicators {
   position: fixed;
   bottom: 2.2rem;
@@ -1258,10 +1263,8 @@ body {
   box-shadow: 0 6px 20px rgba(56,189,248,0.18);
 }
 
-/* hide numeric counter by default (kept for backward compatibility) */
 .lightbox-counter { display: none; }
 
-/* Image fade transition */
 .lightbox-content img {
   transition: opacity 260ms ease, transform 260ms ease;
   opacity: 1;
@@ -1273,7 +1276,6 @@ body {
   transform: scale(0.995);
 }
 
-/* Olyfit focus section */
 
 .olyfit-focus-grid {
   display: grid;
