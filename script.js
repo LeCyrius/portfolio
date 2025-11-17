@@ -334,7 +334,7 @@ async function loadCV() {
     if (name || title) {
       const h = document.createElement('h3');
       h.className = 'resume-name';
-      h.textContent = `${name}${title ? ' — ' + title : ''}`.trim();
+      h.textContent = `${name}${title ? ' - ' + title : ''}`.trim();
       container.appendChild(h);
     }
 
