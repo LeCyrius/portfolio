@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cyril Debuche - Développeur freelance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio de Cyril Debuche, développeur freelance spécialisé en Flutter, FastAPI et architectures web modernes."
+  />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self';" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">CD<span>.</span></div>
+      <nav class="nav">
+        <a href="#about" data-i18n="nav-about">À propos</a>
+        <a href="#skills" data-i18n="nav-skills">Compétences</a>
+        <a href="#projects" data-i18n="nav-projects">Projets</a>
+        <a href="#olyfit-gallery" data-i18n="nav-olyfit">Olyfit</a>
+        <a href="#contact" data-i18n="nav-contact">Contact</a>
+      </nav>
+      <div class="language-switcher">
+        <button class="lang-btn active" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav-toggle-label">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text fade-in">
+          <p class="hero-eyebrow" data-i18n="hero-eyebrow">Développeur freelance</p>
+          <h1>
+            <span data-i18n="hero-title-part1">Je conçois et développe des</span><br />
+            <span class="accent" data-i18n="hero-title-part2">applications modernes</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="hero-subtitle">
+            Je suis Cyril, développeur spécialisé en
+            <strong>Flutter</strong> et <strong>FastAPI</strong>.
+            Je construis des applications mobiles et des API robustes, comme
+            <strong>Olyfit</strong>, une plateforme de suivi sportif avec
+            backend cloud.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn primary" data-i18n="btn-see-projects">Voir mes réalisations</a>
+            <a href="#olyfit-focus" class="btn ghost" data-i18n="btn-see-olyfit-detail">Voir Olyfit en détail</a>
+            <a href="#contact" class="btn ghost" data-i18n="btn-discuss-project">Discuter d'un projet</a>
+          </div>
+          <div class="hero-meta">
+            <span data-i18n="hero-meta">Flutter • FastAPI • PostgreSQL • AWS • APIs</span>
+          </div>
+        </div>
+
+        <div class="hero-card fade-in">
+          <div class="hero-card-inner">
+            <p class="hero-tag" data-i18n="project-main-label">Projet client principal</p>
+
+            <div class="hero-card-title">
+              <img
+                src="images/olyfit-logo.svg"
+                alt="Logo Olyfit"
+                class="olyfit-logo-small"
+                data-i18n-alt="img-olyfit-logo-alt"
+              />
+              <h2 data-i18n="project-main-title">Olyfit</h2>
+            </div>
+
+            <p class="hero-card-text" data-i18n="project-main-desc">
+              Plateforme de suivi sportif avec app mobile Flutter, API FastAPI,
+              stockage S3 et déploiement sur le cloud. Gestion de groupes,
+              d'événements, d'objectifs et de contenus vidéo.
+            </p>
+            <ul class="pill-list">
+              <li data-i18n="hero-pill-mobile">Mobile</li>
+              <li data-i18n="hero-pill-backend">Backend</li>
+              <li data-i18n="hero-pill-api">API REST</li>
+              <li data-i18n="hero-pill-cloud">Cloud</li>
+            </ul>
+            <p class="hero-card-footer" data-i18n="hero-card-footer">Projet complet démontrant ma capacité à gérer une application de A à Z (Flutter, FastAPI, PostgreSQL, S3, CI/CD).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="about-title">À propos</h2>
+          <p data-i18n="about-subtitle">Qui je suis et ce que je propose.</p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <p data-i18n="about-para1">
+              Je suis un développeur sorti d'études il y a quelques mois, en
+              cours de création d'activité <strong>freelance</strong>.
+              Je travaille principalement avec <strong>Flutter</strong> pour le
+              mobile et <strong>FastAPI</strong> pour les backends.
+            </p>
+            <p data-i18n="about-para2">
+              Mon expérience principale est <strong>Olyfit</strong> :
+              une application de suivi sportif complète avec app mobile, API,
+              base de données, stockage de fichiers et déploiement sur le cloud.
+            </p>
+            <p data-i18n="about-para3">
+              Aujourd'hui, je propose mes services pour aider des
+              <strong>startups</strong>, <strong>associations</strong> ou
+              <strong>PME</strong> à développer leurs applications et API,
+              ou à faire évoluer un projet existant.
+            </p>
+          </div>
+
+          <div>
+            <div class="about-avatar-card">
+              <img
+                  src="images/profil-picture.jpg"
+                  alt="Photo de profil de Cyril Debuche"
+                  class="about-avatar"
+                  data-lightbox="profile"
+                  data-i18n-alt="img-profile-alt"
+                />
+              <div>
+                <h3 data-i18n="about-name">Cyril Debuche</h3>
+                <p data-i18n="about-role">Développeur Flutter & FastAPI - freelance.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3 data-i18n="about-offer-title">Ce que je propose</h3>
+              <ul>
+                <li data-i18n="about-offer-item-1">Développement d'applications mobiles Flutter</li>
+                <li data-i18n="about-offer-item-2">Création d'API backend (FastAPI, PostgreSQL)</li>
+                <li data-i18n="about-offer-item-3">Intégration d'API dans une app mobile ou web</li>
+                <li data-i18n="about-offer-item-4">Amélioration ou refonte technique d'un projet existant</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <h3 data-i18n="about-clients-title">Types de clients</h3>
+              <ul>
+                <li data-i18n="about-clients-item-1">Startups et porteurs de projets (MVP, prototypes, apps mobiles)</li>
+                <li data-i18n="about-clients-item-2">PME et entreprises en croissance</li>
+                <li data-i18n="about-clients-item-3">Clubs et structures sportives</li>
+                <li data-i18n="about-clients-item-4">Grandes entreprises souhaitant développer un outil interne ou moderniser un système existant</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="skills-title">Compétences</h2>
+          <p data-i18n="skills-subtitle">Les technologies avec lesquelles je travaille.</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3 data-i18n="skill-mobile">Développement mobile & front</h3>
+            <ul>
+              <li data-i18n="skill-mobile-item-1">Flutter (widgets, navigation, state management)</li>
+              <li data-i18n="skill-mobile-item-2">Riverpod, theming, gestion de la taille de police</li>
+              <li data-i18n="skill-mobile-item-3">Internationalisation (FR / EN / ES / DE)</li>
+              <li data-i18n="skill-mobile-item-4">Intégration d'API REST dans l'app</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 data-i18n="skill-backend">Backend & base de données</h3>
+            <ul>
+              <li data-i18n="skill-backend-item-1">FastAPI (routes, schémas Pydantic, dépendances)</li>
+              <li data-i18n="skill-backend-item-2">SQLAlchemy & PostgreSQL</li>
+              <li data-i18n="skill-backend-item-3">Authentification JWT, gestion utilisateurs</li>
+              <li data-i18n="skill-backend-item-4">Conception d'API pour mobile</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 data-i18n="skill-cloud">Cloud & outils</h3>
+            <ul>
+              <li data-i18n="skill-cloud-item-1">Notions d'AWS (EC2/ECS, S3, Nginx, Certbot)</li>
+              <li data-i18n="skill-cloud-item-2">Git, GitHub, GitHub Actions (CI/CD)</li>
+              <li data-i18n="skill-cloud-item-3">Gestion de projet (Jira, branches, environnements)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3 data-i18n="skill-soft">Soft skills</h3>
+            <ul>
+              <li data-i18n="skill-soft-item-1">Autonome et curieux</li>
+              <li data-i18n="skill-soft-item-2">Capacité à apprendre en continu</li>
+              <li data-i18n="skill-soft-item-3">Communication avec les équipes produit / tech</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="projects-title">Projets</h2>
+          <p data-i18n="projects-subtitle">Une sélection de projets significatifs.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-badge" data-i18n="project-badge-main">Projet principal</div>
+
+            <h3 data-i18n="project-olyfit-title">Olyfit – Application de suivi sportif</h3>
+            <p class="project-meta" data-i18n="project-olyfit-meta">Flutter • FastAPI • PostgreSQL • AWS • S3</p>
+
+            <p data-i18n="project-olyfit-desc">
+              Olyfit est une plateforme complète de suivi sportif pour coachs et athlètes :
+              gestion des groupes, des événements, des présences, des objectifs gamifiés,
+              des quiz, ainsi que d'un catalogue d'exercices et de contenus vidéo.
+            </p>
+
+            <p class="project-detail-title" data-i18n="project-detail-features">Fonctionnalités principales :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-olyfit-feature-1">Gestion de groupes et d'athlètes (invitation, membres, rôles).</li>
+              <li data-i18n="project-olyfit-feature-2">Événements (entraînements, matchs) avec présence, statut et commentaires.</li>
+              <li data-i18n="project-olyfit-feature-3">Objectifs avec système d'XP, progression et suivi dans le temps.</li>
+              <li data-i18n="project-olyfit-feature-4">Quiz intégrés pour tester les connaissances des athlètes.</li>
+              <li data-i18n="project-olyfit-feature-5">Bibliothèque d'exercices et de contenus vidéo stockés sur S3.</li>
+              <li data-i18n="project-olyfit-feature-6">Messagerie / échanges entre coachs et athlètes.</li>
+            </ul>
+
+            <p class="project-detail-title" data-i18n="project-detail-stack">Stack technique :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-olyfit-stack-1">Application mobile Flutter (navigation, state management, theming, i18n).</li>
+              <li data-i18n="project-olyfit-stack-2">API FastAPI avec SQLAlchemy & PostgreSQL.</li>
+              <li data-i18n="project-olyfit-stack-3">Stockage de fichiers sur S3 (avatars, documents, vidéos).</li>
+              <li data-i18n="project-olyfit-stack-4">Déploiement sur le cloud avec HTTPS et CI/CD (GitHub Actions).</li>
+            </ul>
+
+            <p class="project-detail-title" data-i18n="project-detail-role">Mon rôle :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-olyfit-role-1">Développement de nombreuses pages Flutter (groupes, chat, quiz, évolution, préférences, profil, etc.).</li>
+              <li data-i18n="project-olyfit-role-2">Conception et implémentation de routes FastAPI (utilisateurs, objectifs, événements, quiz…).</li>
+              <li data-i18n="project-olyfit-role-3">Modélisation des données et intégration PostgreSQL / SQLAlchemy.</li>
+              <li data-i18n="project-olyfit-role-4">Travail sur la migration vers le cloud (S3, configuration Nginx/HTTPS, intégration avec la CI/CD).</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge project-badge-secondary" data-i18n="project-type-university">Projet universitaire</div>
+            <h3 data-i18n="project-notalone-title">NotAlone - Application mobile</h3>
+            <p class="project-meta" data-i18n="project-notalone-meta">Android Studio • Java/Kotlin • Firebase</p>
+            <p data-i18n="project-notalone-desc">
+              Application mobile de réseau social interne avec gestion
+              d'événements, messagerie intégrée et carte interactive
+              utilisant Google Maps.
+            </p>
+            <ul class="pill-list">
+              <li data-i18n="project-notalone-pill-1">Réseau social</li>
+              <li data-i18n="project-notalone-pill-2">Gestion d'événements</li>
+              <li data-i18n="project-notalone-pill-3">Messagerie</li>
+              <li data-i18n="project-notalone-pill-4">Google Maps</li>
+            </ul>
+            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-notalone-role-1">Logique mobile et développement sur Android Studio.</li>
+              <li data-i18n="project-notalone-role-2">Implémentation de la messagerie intégrée.</li>
+              <li data-i18n="project-notalone-role-3">Intégration de la carte interactive (Google Maps).</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge project-badge-secondary" data-i18n="project-type-university-vr">Projet universitaire VR</div>
+            <h3 data-i18n="project-vr-title">Escape Game VR - Vaisseau spatial</h3>
+            <p class="project-meta" data-i18n="project-vr-meta">Unity • C# • Oculus/Meta SDK</p>
+            <p data-i18n="project-vr-desc">
+              Jeu immersif en réalité virtuelle : escape game situé dans
+              un vaisseau spatial avec puzzles et interactions VR pour
+              progresser dans l'expérience.
+            </p>
+            <ul class="pill-list">
+              <li data-i18n="project-vr-pill-1">Réalité virtuelle</li>
+              <li data-i18n="project-vr-pill-2">Escape game</li>
+              <li data-i18n="project-vr-pill-3">Puzzles interactifs</li>
+            </ul>
+            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-vr-role-1">Conception des interactions et mécaniques VR.</li>
+              <li data-i18n="project-vr-role-2">Implémentation des puzzles et logique gameplay.</li>
+              <li data-i18n="project-vr-role-3">Intégration avec Oculus/Meta SDK.</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-badge project-badge-secondary" data-i18n="project-type-personal">Projet personnel</div>
+            <h3 data-i18n="project-flappy-title">Jeu 2D - Style Flappy Bird</h3>
+            <p class="project-meta" data-i18n="project-flappy-meta">C</p>
+            <p data-i18n="project-flappy-desc">
+              Petit jeu en 2D développé en C, inspiré de Flappy Bird :
+              gestion des obstacles, système de score et mécanique de
+              physique simple. Projet de première année explorant les
+              bases du game dev en langage C.
+            </p>
+            <ul class="pill-list">
+              <li data-i18n="project-flappy-pill-1">Gameplay 2D</li>
+              <li data-i18n="project-flappy-pill-2">Obstacles</li>
+              <li data-i18n="project-flappy-pill-3">Système de score</li>
+              <li data-i18n="project-flappy-pill-4">Physique simple</li>
+            </ul>
+            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
+            <ul class="project-detail">
+              <li data-i18n="project-flappy-role-1">Gestion de la physique simple et des collisions.</li>
+              <li data-i18n="project-flappy-role-2">Boucle de jeu et rendu 2D.</li>
+              <li data-i18n="project-flappy-role-3">Implémentation du système de score.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="olyfit-focus">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="olyfit-focus-title">Olyfit - Focus projet</h2>
+          <p data-i18n="olyfit-focus-subtitle">Contexte, fonctionnalités et responsabilités sur ce projet clé.</p>
+        </div>
+
+        <div class="olyfit-focus-grid">
+          <div class="olyfit-focus-block">
+            <h3 data-i18n="olyfit-focus-context-title">Contexte</h3>
+            <p data-i18n="olyfit-focus-context-1">
+              Olyfit est né d'un besoin concret : aider les coachs à mieux suivre leurs athlètes
+              et structurer leurs contenus (entraînements, objectifs, vidéos, quiz).
+              Le projet est activement développé et a vocation à être utilisé par des clubs
+              et structures sportives.
+            </p>
+            <p data-i18n="olyfit-focus-context-2">
+              Mon objectif sur ce projet est de construire une base technique solide, maintenable,
+              et prête à évoluer (nouvelles fonctionnalités, montée en charge, nouveaux sports).
+            </p>
+          </div>
+
+          <div class="olyfit-focus-block">
+            <h3 data-i18n="olyfit-focus-setup-title">Ce que j'ai mis en place</h3>
+            <ul>
+              <li data-i18n="olyfit-focus-setup-1">Architecture de l'application Flutter (navigation, gestion d'état, theming, i18n).</li>
+              <li data-i18n="olyfit-focus-setup-2">Écrans d'onboarding, de gestion de groupes, de suivi d'objectifs et de quiz.</li>
+              <li data-i18n="olyfit-focus-setup-3">Appels API typés, gestion des erreurs et des états de chargement.</li>
+              <li data-i18n="olyfit-focus-setup-4">Schémas FastAPI (Pydantic), routes REST et logique métier principale.</li>
+              <li data-i18n="olyfit-focus-setup-5">Intégration de PostgreSQL, organisation des modèles SQLAlchemy.</li>
+              <li data-i18n="olyfit-focus-setup-6">Connexion au stockage S3 pour les avatars et futures vidéos de cours.</li>
+            </ul>
+          </div>
+
+          <div class="olyfit-focus-block">
+            <h3 data-i18n="olyfit-focus-next-title">Enjeux et prochaines étapes</h3>
+            <ul>
+              <li data-i18n="olyfit-focus-next-1">Améliorer encore l'expérience des coachs (statistiques, tableaux de bord, filtres).</li>
+              <li data-i18n="olyfit-focus-next-2">Renforcer la partie gamification (système d'XP, badges, suivi long terme).</li>
+              <li data-i18n="olyfit-focus-next-3">Optimiser les performances backend et les temps de chargement côté mobile.</li>
+              <li data-i18n="olyfit-focus-next-4">Industrialiser encore davantage les déploiements (environnements dev / prod distincts).</li>
+            </ul>
+            <p data-i18n="olyfit-focus-next-5">
+              C'est le projet sur lequel je construis ma crédibilité de développeur freelance :
+              il montre ma capacité à gérer un projet complet, du mobile au backend en passant par le cloud.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-alt" id="olyfit-gallery">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="gallery-title">Olyfit - Aperçu visuel</h2>
+          <p data-i18n="gallery-subtitle">Quelques écrans de l'application en cours de développement.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="images/landing.png" alt="Écran de lancement Olyfit" data-lightbox="olyfit" data-i18n-alt="img-gallery-landing-alt" />
+            <figcaption data-i18n="gallery-caption-1">Écran d'accueil / landing</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/home-page.png" alt="Page d'accueil Olyfit" data-lightbox="olyfit" data-i18n-alt="img-gallery-home-alt" />
+            <figcaption data-i18n="gallery-caption-2">Page d'accueil avec programmes et navigation</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/planning.png" alt="Planning coach Olyfit" data-lightbox="olyfit" data-i18n-alt="img-gallery-planning-alt" />
+            <figcaption data-i18n="gallery-caption-3">Planning coach / gestion des événements</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="resume-title">Résumé</h2>
+          <p data-i18n="resume-subtitle">Extraits clefs de mon CV.</p>
+        </div>
+        <div id="resumeSection" class="resume-content">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container fade-in">
+        <div class="section-header">
+          <h2 data-i18n="contact-title">Contact</h2>
+          <p data-i18n="contact-subtitle">Parlons de votre projet.</p>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <p data-i18n="contact-desc1">
+              Je suis disponible pour des missions freelance en développement :
+              application mobile Flutter, backend FastAPI, intégration d'API
+              ou amélioration d'un projet existant.
+            </p>
+            <p data-i18n="contact-desc2">
+              Vous avez une idée de produit, un MVP à construire, ou un outil
+              interne à développer ? N'hésitez pas à me contacter pour en
+              discuter.
+            </p>
+            <div class="contact-info-box">
+              <h3 data-i18n="contact-form-title">Vous pouvez aussi m'envoyer un mail</h3>
+              <div class="contact-actions">
+                <p data-i18n="contact-form-desc">Pour me contacter rapidement, cliquez sur le bouton ci‑dessous pour ouvrir votre client mail.</p>
+                <a href="mailto:debuche.cyril@outlook.com" class="btn primary" data-i18n="contact-form-submit">Envoyer un mail</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <h3 data-i18n="contact-card-title">Me contacter</h3>
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:debuche.cyril@outlook.com" class="contact-link">
+                  <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                  <span>debuche.cyril@outlook.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+33646513787" class="contact-link">
+                  <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>+33 6 46 51 37 87</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/cyril-debuche-465847221?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" class="contact-link">
+                  <svg class="contact-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> <span data-i18n="footer-year">Cyril Debuche – Développeur freelance.</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

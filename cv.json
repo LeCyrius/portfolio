@@ -1,0 +1,70 @@
+{
+  "name": "Cyril Debuche",
+  "title": "Développeur Flutter & FastAPI – freelance",
+  "summary": "Développeur full-stack orienté mobile, spécialisé en Flutter et FastAPI, avec une expérience de conception d'application de formation sportive gamifiée et un parcours d'arbitre international de hockey sur glace qui m'a appris à décider vite et rester calme sous pression.",
+  "highlights": [
+    "Développement d'une application de formation sportive gamifiée (Olyfit) avec Flutter et backend API.",
+    "Expérience en bases de données SQL, intégration d'API et déploiement sur le cloud.",
+    "Capacité à gérer un projet et à travailler en équipe (coordination dev / produit).",
+    "Arbitre de hockey sur glace au plus haut niveau français et international depuis plusieurs années."
+  ],
+  "experience": [
+    {
+      "role": "Conception d'application (backend et frontend)",
+      "company": "Projet de formation sportive gamifiée",
+      "period": "mars 2025 – août 2025",
+      "details": [
+        "Développement avec Flutter sous Android Studio d'une application de formation sportive gamifiée.",
+        "Participation à la conception du backend et de la base de données.",
+        "Gestion de projet et coordination avec l'équipe.",
+        "Première implémentation d'éléments d'IA dans le projet."
+      ]
+    },
+    {
+      "role": "Stagiaire développeur d'applications",
+      "company": "TATA Steel Maubeuge",
+      "period": "avril 2021 – juin 2021",
+      "details": [
+        "Développement WinDev d'un outil de gestion des stocks.",
+        "Conception et gestion de base de données associée.",
+        "Maintenance évolutive de l'existant."
+      ]
+    },
+    {
+      "role": "Arbitre de hockey sur glace",
+      "company": "Synerglace Ligue Magnus",
+      "period": "depuis août 2017",
+      "details": [
+        "Responsable du bon déroulement de rencontres de haut niveau.",
+        "Application du règlement de la FFHG et gestion de situations tendues.",
+        "Travail en équipe avec les officiels et les clubs."
+      ]
+    },
+    {
+      "role": "Arbitre international de hockey sur glace",
+      "company": "",
+      "period": "depuis août 2021",
+      "details": [
+        "Championnats du monde, Champions League et coupes d'Europe.",
+        "Participation à des camps de développement, dont NHL en 2024."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master Sciences et Techniques des Métavers – IA / Réalité virtuelle",
+      "school": "INSA Hauts-de-France",
+      "period": "2023 – 2025"
+    },
+    {
+      "degree": "Licence informatique",
+      "school": "INSA Hauts-de-France",
+      "period": "2018 – 2021"
+    },
+    {
+      "degree": "Bac S, mention assez bien",
+      "school": "",
+      "period": "2017"
+    }
+  ]
+}

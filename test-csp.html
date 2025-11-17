@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test CSP</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+</head>
+<body>
+  <h1>Test de la Content Security Policy</h1>
+  <p>Ouvrez la console du navigateur (F12) pour voir les erreurs CSP.</p>
+  
+  <h2>Tests à effectuer :</h2>
+  <ul>
+    <li>Script externe (script.js) - doit fonctionner</li>
+    <li>Style externe (style.css) - doit fonctionner</li>
+    <li>Google Fonts - doit fonctionner</li>
+    <li>Images locales - doivent fonctionner</li>
+    <li>Fetch vers translations.json - doit fonctionner</li>
+    <li>Script externe malveillant - doit être bloqué</li>
+    <li>Image externe non autorisée - doit être bloquée</li>
+  </ul>
+
+  <script>
+    console.log('Script inline fonctionne');
+    
+    // Test fetch
+    fetch('translations.json')
+      .then(() => console.log('Fetch vers translations.json fonctionne'))
+      .catch(err => console.error('Erreur fetch:', err));
+  </script>
+</body>
+</html>
+
