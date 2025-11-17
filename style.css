@@ -504,7 +504,7 @@ body {
 }
 
 .project-card h3 {
-  margin-top: 0.4rem;
+  margin-top: 2.5rem;
   margin-bottom: 0.3rem;
   font-size: 1.1rem;
 }
@@ -555,6 +555,13 @@ body {
   gap: 1.2rem;
 }
 
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
 .gallery-item {
   background: rgba(15, 23, 42, 0.95);
   border-radius: 16px;
@@ -582,8 +589,11 @@ body {
 .gallery-item img {
   display: block;
   width: 100%;
+  height: auto;
+  min-height: 200px;
   border-radius: 12px;
   object-fit: cover;
+  background: rgba(15, 23, 42, 0.5);
 }
 
 .gallery-item figcaption {
@@ -730,6 +740,15 @@ body {
 
   .gallery-item figcaption {
     font-size: 0.95rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .gallery-item img {
+    min-height: 250px;
   }
 }
 
@@ -1020,8 +1039,9 @@ body {
 
 /* Profile: circular, larger, shows site in background */
 .lightbox-content.profile {
-  width: min(540px, 65vw);
-  height: min(540px, 65vh);
+  width: min(540px, 65vw, 65vh);
+  height: min(540px, 65vw, 65vh);
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 30px 80px rgba(2,6,23,0.8);
@@ -1142,6 +1162,11 @@ body {
   .lightbox-caption {
     max-width: 90vw;
     font-size: 0.95rem;
+  }
+
+  .lightbox-content.profile {
+    width: min(80vw, 80vh);
+    height: min(80vw, 80vh);
   }
 }
 
