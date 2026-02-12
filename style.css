@@ -63,15 +63,27 @@ body {
   height: 64px;
 }
 
-.logo {
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.logo span {
-  color: var(--accent);
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.35rem 0.65rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .nav {
