@@ -2,11 +2,11 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Cyril Debuche - Développeur freelance</title>
+  <title>CDev solutions – Conception & développement d'applications</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Portfolio de Cyril Debuche, développeur freelance spécialisé en Flutter, FastAPI et architectures web modernes."
+    content="CDev Solutions conçoit et développe des applications web, mobiles et backends. Site vitrine, paiements Stripe, apps Flutter, API FastAPI."
   />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self';" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" />
@@ -21,15 +21,13 @@
 <body>
   <header class="site-header">
     <div class="container nav-container">
-      <a href="#top" class="logo-link">
-        <div class="logo-container">
-          <img src="images/cdev-solutions-logo.png" alt="CDev solutions" class="logo-img" />
-        </div>
+      <a href="#top" class="logo-text-link">
+        <span class="logo-text"><span class="logo-text-brand">CDev</span> solutions</span>
       </a>
       <nav class="nav">
         <a href="#about" data-i18n="nav-about">À propos</a>
         <a href="#skills" data-i18n="nav-skills">Compétences</a>
-        <a href="#projects" data-i18n="nav-projects">Projets</a>
+        <a href="#projects" data-i18n="nav-projects">Réalisations</a>
         <a href="#olyfit-focus" data-i18n="nav-olyfit">Olyfit</a>
         <a href="#contact" data-i18n="nav-contact">Contact</a>
       </nav>
@@ -47,22 +45,22 @@
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div class="hero-text fade-in">
-          <p class="hero-eyebrow" data-i18n="hero-eyebrow">Développeur freelance</p>
+          <p class="hero-eyebrow" data-i18n="hero-eyebrow">Conception & développement</p>
           <h1>
-            <span data-i18n="hero-title-part1">Je conçois et développe des</span><br />
-            <span class="accent" data-i18n="hero-title-part2">applications modernes</span>
+            <span data-i18n="hero-title-part1">Des solutions</span><br />
+            <span class="accent" data-i18n="hero-title-part2">site, app & backend</span>
           </h1>
           <p class="hero-subtitle" data-i18n="hero-subtitle">
-            Développeur spécialisé en <strong>Flutter</strong> et <strong>FastAPI</strong>, je conçois des applications mobiles modernes et des backends fiables, sécurisés et prêts pour la production.
+            CDev Solutions accompagne les startups, PME et structures sportives : vitrine web, inscription et paiement (Stripe), application mobile Flutter, API FastAPI.
           </p>
           <div class="hero-actions">
-            <a href="#projects" class="btn primary" data-i18n="btn-see-projects">Voir mes réalisations</a>
+            <a href="#olyfit-focus" class="btn primary" data-i18n="btn-see-projects">Découvrir Olyfit</a>
           </div>
         </div>
 
         <div class="hero-card fade-in">
           <div class="hero-card-inner">
-            <p class="hero-tag" data-i18n="project-main-label">Ma dernière réalisation</p>
+            <p class="hero-tag" data-i18n="project-main-label">Référence client</p>
 
             <div class="hero-card-title">
               <img
@@ -75,17 +73,15 @@
             </div>
 
             <p class="hero-card-text" data-i18n="project-main-desc">
-              Plateforme de suivi sportif avec app mobile Flutter, API FastAPI,
-              stockage S3 et déploiement sur le cloud. Gestion de groupes,
-              d'événements, d'objectifs et de contenus vidéo.
+              Plateforme de coaching sportif : site web olyfit.eu (inscription, abonnements Stripe), app mobile Flutter, backend FastAPI. Écosystème complet pensée pour les stores et la conformité.
             </p>
             <ul class="pill-list">
-              <li data-i18n="hero-pill-mobile">Mobile</li>
-              <li data-i18n="hero-pill-backend">Backend</li>
-              <li data-i18n="hero-pill-api">API REST</li>
-              <li data-i18n="hero-pill-cloud">Cloud</li>
+              <li data-i18n="hero-pill-mobile">Site web</li>
+              <li data-i18n="hero-pill-backend">App Flutter</li>
+              <li data-i18n="hero-pill-api">API FastAPI</li>
+              <li data-i18n="hero-pill-cloud">Stripe</li>
             </ul>
-            <p class="hero-card-footer" data-i18n="hero-card-footer">Projet complet démontrant ma capacité à gérer une application de A à Z (Flutter, FastAPI, PostgreSQL, S3, CI/CD).</p>
+            <p class="hero-card-footer" data-i18n="hero-card-footer">CDev Solutions a conçu et développé l'écosystème complet : site, app, backend et intégration des paiements.</p>
           </div>
         </div>
       </div>
@@ -95,52 +91,36 @@
       <div class="container fade-in">
         <div class="section-header">
           <h2 data-i18n="about-title">À propos</h2>
-          <p data-i18n="about-subtitle">Qui je suis et ce que je propose.</p>
+          <p data-i18n="about-subtitle">Qui sommes-nous et ce que nous proposons.</p>
         </div>
 
         <div class="about-grid">
           <div>
-            <p data-i18n="about-para3">
-              Aujourd'hui, je propose mes services pour aider des
-              <strong>startups</strong>, des <strong>PME</strong>, des <strong>clubs</strong> et structures sportives, ainsi que des <strong>grandes entreprises</strong> à développer leurs applications et API,
-              ou à faire évoluer un projet existant.
-            </p>
             <p data-i18n="about-para1">
-              Mes expériences m'ont appris à gérer un projet de bout en bout : de la conception à la mise en ligne, en passant par la base de données, l'API, l'interface mobile et le déploiement cloud. Mon objectif est d'aider mes clients à obtenir une solution fiable, évolutive et agréable à utiliser.
+              CDev Solutions accompagne les <strong>startups</strong>, <strong>PME</strong>, <strong>clubs</strong> et structures sportives ainsi que les <strong>grandes entreprises</strong> dans la conception et le développement de leurs applications web, mobiles et API.
+            </p>
+            <p data-i18n="about-para2">
+              Nous intervenons de bout en bout : conseil et conception (architecture produit, conformité stores), développement (site vitrine, app mobile, backend), intégration (paiements Stripe, webhooks, gestion des rôles utilisateurs). Notre approche privilégie une vision écosystème : site + app + backend conçus ensemble pour une solution cohérente et évolutive.
             </p>
           </div>
 
           <div>
-            <div class="about-avatar-card">
-              <img
-                  src="images/profil-picture.jpg"
-                  alt="Photo de profil de Cyril Debuche"
-                  class="about-avatar"
-                  data-lightbox="profile"
-                  data-i18n-alt="img-profile-alt"
-                />
-              <div>
-                <h3 data-i18n="about-name">Cyril Debuche</h3>
-                <p data-i18n="about-role">Développeur Flutter & FastAPI - freelance.</p>
-              </div>
-            </div>
-
             <div class="info-card">
-              <h3 data-i18n="about-offer-title">Ce que je propose</h3>
+              <h3 data-i18n="about-offer-title">Nos prestations</h3>
               <ul>
-                <li data-i18n="about-offer-item-1">Développement d'applications mobiles Flutter</li>
-                <li data-i18n="about-offer-item-2">Création d'API backend (FastAPI, PostgreSQL)</li>
-                <li data-i18n="about-offer-item-3">Intégration d'API dans une app mobile ou web</li>
-                <li data-i18n="about-offer-item-4">Amélioration ou refonte technique d'un projet existant</li>
+                <li data-i18n="about-offer-item-1">Site web vitrine, inscription et paiement (Stripe)</li>
+                <li data-i18n="about-offer-item-2">Applications mobiles Flutter</li>
+                <li data-i18n="about-offer-item-3">API backend FastAPI, PostgreSQL</li>
+                <li data-i18n="about-offer-item-4">Intégration paiements, webhooks, notifications</li>
               </ul>
             </div>
             <div class="info-card">
-              <h3 data-i18n="about-clients-title">Types de clients</h3>
+              <h3 data-i18n="about-clients-title">Nos clients</h3>
               <ul>
-                <li data-i18n="about-clients-item-1">Startups et porteurs de projets (MVP, prototypes, apps mobiles)</li>
+                <li data-i18n="about-clients-item-1">Startups et porteurs de projets (MVP, prototypes)</li>
                 <li data-i18n="about-clients-item-2">PME et entreprises en croissance</li>
                 <li data-i18n="about-clients-item-3">Clubs et structures sportives</li>
-                <li data-i18n="about-clients-item-4">Grandes entreprises souhaitant développer un outil interne ou moderniser un système existant</li>
+                <li data-i18n="about-clients-item-4">Grandes entreprises (outils internes, modernisation)</li>
               </ul>
             </div>
           </div>
@@ -152,7 +132,7 @@
       <div class="container fade-in">
         <div class="section-header">
           <h2 data-i18n="skills-title">Compétences</h2>
-          <p data-i18n="skills-subtitle">Les technologies avec lesquelles je travaille.</p>
+          <p data-i18n="skills-subtitle">Notre stack technique.</p>
         </div>
         <div class="skills-grid">
           <div class="skill-card">
@@ -196,118 +176,43 @@
     <section class="section" id="projects">
       <div class="container fade-in">
         <div class="section-header">
-          <h2 data-i18n="projects-title">Projets</h2>
-          <p data-i18n="projects-subtitle">Une sélection de projets significatifs.</p>
+          <h2 data-i18n="projects-title">Réalisations</h2>
+          <p data-i18n="projects-subtitle">Nos références client.</p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-badge" data-i18n="project-badge-main">Projet principal</div>
+            <div class="project-badge" data-i18n="project-badge-main">Référence principale</div>
 
-            <h3 data-i18n="project-olyfit-title">Olyfit – Application de suivi sportif</h3>
-            <p class="project-meta" data-i18n="project-olyfit-meta">Flutter • FastAPI • PostgreSQL • AWS • S3</p>
+            <h3 data-i18n="project-olyfit-title">Olyfit – Plateforme de coaching sportif</h3>
+            <p class="project-meta" data-i18n="project-olyfit-meta">WordPress • Stripe • Flutter • FastAPI • PostgreSQL</p>
 
             <p data-i18n="project-olyfit-desc">
-              Olyfit est une plateforme complète de suivi sportif pour coachs et athlètes :
-              gestion des groupes, des événements, des présences, des objectifs gamifiés,
-              des quiz, ainsi que d'un catalogue d'exercices et de contenus vidéo.
+              Olyfit est une plateforme de coaching sportif : les athlètes suivent entraînements et objectifs, les coachs et responsables éducatifs les encadrent. Le service est payant pour les athlètes (abonnement) ; les professionnels n'ont pas d'abonnement payant.
             </p>
 
-            <p class="project-detail-title" data-i18n="project-detail-features">Fonctionnalités principales :</p>
+            <p class="project-detail-title" data-i18n="project-detail-features">Modèle produit :</p>
             <ul class="project-detail">
-              <li data-i18n="project-olyfit-feature-1">Gestion de groupes et d'athlètes (invitation, membres, rôles).</li>
-              <li data-i18n="project-olyfit-feature-2">Événements (entraînements, matchs) avec présence, statut et commentaires.</li>
-              <li data-i18n="project-olyfit-feature-3">Objectifs avec système d'XP, progression et suivi dans le temps.</li>
-              <li data-i18n="project-olyfit-feature-4">Quiz intégrés pour tester les connaissances des athlètes.</li>
-              <li data-i18n="project-olyfit-feature-5">Bibliothèque d'exercices et de contenus vidéo stockés sur S3.</li>
-              <li data-i18n="project-olyfit-feature-6">Messagerie / échanges entre coachs et athlètes.</li>
+              <li data-i18n="project-olyfit-feature-1">Site web olyfit.eu : vitrine, inscription et paiement (abonnements Stripe), pages légales (CGU, CGV, confidentialité).</li>
+              <li data-i18n="project-olyfit-feature-2">App mobile Flutter : utilisation du service (connexion, contenu, entraînements, objectifs). App gratuite, pas d'IAP.</li>
+              <li data-i18n="project-olyfit-feature-3">Backend FastAPI : API (auth, utilisateurs, abonnements, webhooks Stripe, notifications push).</li>
             </ul>
 
             <p class="project-detail-title" data-i18n="project-detail-stack">Stack technique :</p>
             <ul class="project-detail">
-              <li data-i18n="project-olyfit-stack-1">Application mobile Flutter (navigation, state management, theming, i18n).</li>
-              <li data-i18n="project-olyfit-stack-2">API FastAPI avec SQLAlchemy & PostgreSQL.</li>
-              <li data-i18n="project-olyfit-stack-3">Stockage de fichiers sur S3 (avatars, documents, vidéos).</li>
-              <li data-i18n="project-olyfit-stack-4">Déploiement sur le cloud avec HTTPS et CI/CD (GitHub Actions).</li>
+              <li data-i18n="project-olyfit-stack-1">Site : WordPress (thème sur mesure), HTML/CSS/JS, Stripe.</li>
+              <li data-i18n="project-olyfit-stack-2">App : Flutter (Dart).</li>
+              <li data-i18n="project-olyfit-stack-3">Back : Python, FastAPI, base de données, Stripe (paiements et webhooks).</li>
             </ul>
 
-            <p class="project-detail-title" data-i18n="project-detail-role">Mon rôle :</p>
+            <p class="project-detail-title" data-i18n="project-detail-role">Apport CDev Solutions :</p>
             <ul class="project-detail">
-              <li data-i18n="project-olyfit-role-1">Développement de nombreuses pages Flutter (groupes, chat, quiz, évolution, préférences, profil, etc.).</li>
-              <li data-i18n="project-olyfit-role-2">Conception et implémentation de routes FastAPI (utilisateurs, objectifs, événements, quiz…).</li>
-              <li data-i18n="project-olyfit-role-3">Modélisation des données et intégration PostgreSQL / SQLAlchemy.</li>
-              <li data-i18n="project-olyfit-role-4">Travail sur la migration vers le cloud (S3, configuration Nginx/HTTPS, intégration avec la CI/CD).</li>
+              <li data-i18n="project-olyfit-role-1">Conseil et conception : architecture site = inscription & paiement, app = usage, conformité stores.</li>
+              <li data-i18n="project-olyfit-role-2">Développement : site vitrine, app mobile, API backend.</li>
+              <li data-i18n="project-olyfit-role-3">Intégration : paiements Stripe, webhooks, gestion des rôles multi-utilisateurs.</li>
             </ul>
           </article>
 
-          <article class="project-card">
-            <div class="project-badge project-badge-secondary" data-i18n="project-type-university">Projet universitaire</div>
-            <h3 data-i18n="project-notalone-title">NotAlone - Application mobile</h3>
-            <p class="project-meta" data-i18n="project-notalone-meta">Android Studio • Java/Kotlin • Firebase</p>
-            <p data-i18n="project-notalone-desc">
-              Application mobile de réseau social interne avec gestion
-              d'événements, messagerie intégrée et carte interactive
-              utilisant Google Maps.
-            </p>
-            <ul class="pill-list">
-              <li data-i18n="project-notalone-pill-1">Réseau social</li>
-              <li data-i18n="project-notalone-pill-2">Gestion d'événements</li>
-              <li data-i18n="project-notalone-pill-3">Messagerie</li>
-              <li data-i18n="project-notalone-pill-4">Google Maps</li>
-            </ul>
-            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
-            <ul class="project-detail">
-              <li data-i18n="project-notalone-role-1">Logique mobile et développement sur Android Studio.</li>
-              <li data-i18n="project-notalone-role-2">Implémentation de la messagerie intégrée.</li>
-              <li data-i18n="project-notalone-role-3">Intégration de la carte interactive (Google Maps).</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-badge project-badge-secondary" data-i18n="project-type-university-vr">Projet universitaire VR</div>
-            <h3 data-i18n="project-vr-title">Escape Game VR - Vaisseau spatial</h3>
-            <p class="project-meta" data-i18n="project-vr-meta">Unity • C# • Oculus/Meta SDK</p>
-            <p data-i18n="project-vr-desc">
-              Jeu immersif en réalité virtuelle : escape game situé dans
-              un vaisseau spatial avec puzzles et interactions VR pour
-              progresser dans l'expérience.
-            </p>
-            <ul class="pill-list">
-              <li data-i18n="project-vr-pill-1">Réalité virtuelle</li>
-              <li data-i18n="project-vr-pill-2">Escape game</li>
-              <li data-i18n="project-vr-pill-3">Puzzles interactifs</li>
-            </ul>
-            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
-            <ul class="project-detail">
-              <li data-i18n="project-vr-role-1">Conception des interactions et mécaniques VR.</li>
-              <li data-i18n="project-vr-role-2">Implémentation des puzzles et logique gameplay.</li>
-              <li data-i18n="project-vr-role-3">Intégration avec Oculus/Meta SDK.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-badge project-badge-secondary" data-i18n="project-type-personal">Projet personnel</div>
-            <h3 data-i18n="project-flappy-title">Jeu 2D - Style Flappy Bird</h3>
-            <p class="project-meta" data-i18n="project-flappy-meta">C</p>
-            <p data-i18n="project-flappy-desc">
-              Petit jeu en 2D développé en C, inspiré de Flappy Bird :
-              gestion des obstacles, système de score et mécanique de
-              physique simple. Projet de première année explorant les
-              bases du game dev en langage C.
-            </p>
-            <ul class="pill-list">
-              <li data-i18n="project-flappy-pill-1">Gameplay 2D</li>
-              <li data-i18n="project-flappy-pill-2">Obstacles</li>
-              <li data-i18n="project-flappy-pill-3">Système de score</li>
-              <li data-i18n="project-flappy-pill-4">Physique simple</li>
-            </ul>
-            <p class="project-detail-title" data-i18n="project-role">Rôle :</p>
-            <ul class="project-detail">
-              <li data-i18n="project-flappy-role-1">Gestion de la physique simple et des collisions.</li>
-              <li data-i18n="project-flappy-role-2">Boucle de jeu et rendu 2D.</li>
-              <li data-i18n="project-flappy-role-3">Implémentation du système de score.</li>
-            </ul>
-          </article>
         </div>
       </div>
     </section>
@@ -315,48 +220,37 @@
     <section class="section section-alt" id="olyfit-focus">
       <div class="container fade-in">
         <div class="section-header">
-          <h2 data-i18n="olyfit-focus-title">Olyfit - Focus projet</h2>
-          <p data-i18n="olyfit-focus-subtitle">Contexte, fonctionnalités et responsabilités sur ce projet clé.</p>
+          <h2 data-i18n="olyfit-focus-title">Olyfit – Étude de cas</h2>
+          <p data-i18n="olyfit-focus-subtitle">Une référence client CDev Solutions.</p>
         </div>
 
         <div class="olyfit-focus-grid">
           <div class="olyfit-focus-block">
-            <h3 data-i18n="olyfit-focus-context-title">Contexte</h3>
+            <h3 data-i18n="olyfit-focus-context-title">Contexte et défi</h3>
             <p data-i18n="olyfit-focus-context-1">
-              Olyfit est né d'un besoin concret : aider les coachs à mieux suivre leurs athlètes
-              et structurer leurs contenus (entraînements, objectifs, vidéos, quiz).
-              Le projet est activement développé et a vocation à être utilisé par des clubs
-              et structures sportives.
+              Olyfit est une plateforme de coaching sportif : les athlètes suivent entraînements et objectifs, les coachs et responsables éducatifs les encadrent. Le service est payant pour les athlètes (abonnement) ; les professionnels n'ont pas d'abonnement payant.
             </p>
             <p data-i18n="olyfit-focus-context-2">
-              Mon objectif sur ce projet est de construire une base technique solide, maintenable,
-              et prête à évoluer (nouvelles fonctionnalités, montée en charge, nouveaux sports).
+              Le défi : concevoir un écosystème cohérent — site web pour inscription et paiement, application mobile pour l'usage quotidien, backend pour tout orchestrer — tout en respectant les contraintes des stores (pas d'IAP pour l'abonnement) et la gestion multi-rôles (athlètes, coachs, éducatifs).
             </p>
           </div>
 
           <div class="olyfit-focus-block">
-            <h3 data-i18n="olyfit-focus-setup-title">Ce que j'ai mis en place</h3>
+            <h3 data-i18n="olyfit-focus-setup-title">Apport CDev Solutions</h3>
             <ul>
-              <li data-i18n="olyfit-focus-setup-1">Architecture de l'application Flutter (navigation, gestion d'état, theming, i18n).</li>
-              <li data-i18n="olyfit-focus-setup-2">Écrans d'onboarding, de gestion de groupes, de suivi d'objectifs et de quiz.</li>
-              <li data-i18n="olyfit-focus-setup-3">Appels API typés, gestion des erreurs et des états de chargement.</li>
-              <li data-i18n="olyfit-focus-setup-4">Schémas FastAPI (Pydantic), routes REST et logique métier principale.</li>
-              <li data-i18n="olyfit-focus-setup-5">Intégration de PostgreSQL, organisation des modèles SQLAlchemy.</li>
-              <li data-i18n="olyfit-focus-setup-6">Connexion au stockage S3 pour les avatars et futures vidéos de cours.</li>
+              <li data-i18n="olyfit-focus-setup-1">Conception : architecture produit site = inscription & paiement, app = usage, conformité stores.</li>
+              <li data-i18n="olyfit-focus-setup-2">Développement du site olyfit.eu (WordPress, Stripe, pages légales CGU/CGV/confidentialité).</li>
+              <li data-i18n="olyfit-focus-setup-3">Développement de l'app mobile Flutter (connexion, contenu, entraînements, objectifs).</li>
+              <li data-i18n="olyfit-focus-setup-4">Développement du backend FastAPI (auth, utilisateurs, abonnements, webhooks Stripe).</li>
+              <li data-i18n="olyfit-focus-setup-5">Intégration paiements Stripe (abonnements, webhooks) et notifications push.</li>
+              <li data-i18n="olyfit-focus-setup-6">Vision écosystème site + app + backend, contraintes stores et multi-rôles.</li>
             </ul>
           </div>
 
           <div class="olyfit-focus-block">
-            <h3 data-i18n="olyfit-focus-next-title">Enjeux et prochaines étapes</h3>
-            <ul>
-              <li data-i18n="olyfit-focus-next-1">Améliorer encore l'expérience des coachs (statistiques, tableaux de bord, filtres).</li>
-              <li data-i18n="olyfit-focus-next-2">Renforcer la partie gamification (système d'XP, badges, suivi long terme).</li>
-              <li data-i18n="olyfit-focus-next-3">Optimiser les performances backend et les temps de chargement côté mobile.</li>
-              <li data-i18n="olyfit-focus-next-4">Industrialiser encore davantage les déploiements (environnements dev / prod distincts).</li>
-            </ul>
+            <h3 data-i18n="olyfit-focus-next-title">En résumé</h3>
             <p data-i18n="olyfit-focus-next-5">
-              C'est le projet sur lequel je construis ma crédibilité de développeur freelance :
-              il montre ma capacité à gérer un projet complet, du mobile au backend en passant par le cloud.
+              CDev Solutions a accompagné Olyfit de la conception à la mise en production : site vitrine et inscription, application mobile, API backend et intégration des paiements. Cette référence illustre notre capacité à livrer un écosystème complet, du site web au backend en passant par l'app mobile.
             </p>
           </div>
         </div>
@@ -386,17 +280,6 @@
       </div>
     </section>
 
-    <section id="resume" class="section">
-      <div class="container fade-in">
-        <div class="section-header">
-          <h2 data-i18n="resume-title">Résumé</h2>
-          <p data-i18n="resume-subtitle">Extraits clefs de mon CV.</p>
-        </div>
-        <div id="resumeSection" class="resume-content">
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="container fade-in">
         <div class="section-header">
@@ -406,25 +289,21 @@
         <div class="contact-grid">
           <div>
             <p data-i18n="contact-desc1">
-              Je suis disponible pour des missions freelance en développement :
-              application mobile Flutter, backend FastAPI, intégration d'API
-              ou amélioration d'un projet existant.
+              CDev Solutions accompagne les startups, PME et structures sportives dans la conception et le développement de leurs applications web, mobiles et API.
             </p>
             <p data-i18n="contact-desc2">
-              Vous avez une idée de produit, un MVP à construire, ou un outil
-              interne à développer ? N'hésitez pas à me contacter pour en
-              discuter.
+              Vous avez un projet (site vitrine, app mobile, paiements, backend) ? Contactez-nous pour en discuter.
             </p>
             <div class="contact-info-box">
-              <h3 data-i18n="contact-form-title">Vous pouvez aussi m'envoyer un mail</h3>
+              <h3 data-i18n="contact-form-title">Nous contacter</h3>
               <div class="contact-actions">
-                <p data-i18n="contact-form-desc">Pour me contacter rapidement, cliquez sur le bouton ci‑dessous pour ouvrir votre client mail.</p>
+                <p data-i18n="contact-form-desc">Pour nous contacter rapidement, cliquez sur le bouton ci‑dessous pour ouvrir votre client mail.</p>
                 <a href="mailto:debuche.cyril@outlook.com" class="btn primary" data-i18n="contact-form-submit">Envoyer un mail</a>
               </div>
             </div>
           </div>
           <div class="contact-card">
-            <h3 data-i18n="contact-card-title">Me contacter</h3>
+            <h3 data-i18n="contact-card-title">Contact</h3>
             <ul class="contact-list">
               <li>
                 <a href="mailto:debuche.cyril@outlook.com" class="contact-link">
@@ -460,7 +339,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> <span data-i18n="footer-year">Cyril Debuche – Développeur freelance.</span></p>
+      <p>© <span id="year"></span> <span data-i18n="footer-year">CDev solutions.</span></p>
     </div>
   </footer>
 
