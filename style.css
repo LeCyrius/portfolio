@@ -74,6 +74,7 @@ body {
 }
 
 .logo-container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,11 +82,26 @@ body {
   padding: 0.5rem 1.35rem;
   border-radius: 12px;
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 0 24px rgba(255, 255, 255, 0.12),
-    0 0 48px rgba(255, 255, 255, 0.06),
-    0 2px 16px rgba(0, 0, 0, 0.3);
+    0 2px 16px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 0 30px 8px rgba(255, 255, 255, 0.2),
+    0 0 60px 20px rgba(255, 255, 255, 0.1);
   min-height: 54px;
+}
+
+.logo-container::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  border-radius: 24px;
+  background: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
 }
 
 .logo-img {
