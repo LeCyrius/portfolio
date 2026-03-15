@@ -74,15 +74,15 @@ body {
   align-items: center;
   justify-content: center;
   background: #fff;
-  padding: 0.25rem 0.45rem;
-  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-  max-height: 38px;
+  max-height: 52px;
 }
 
 .logo-img {
-  height: 24px;
-  max-width: 110px;
+  height: 32px;
+  max-width: 145px;
   width: auto;
   display: block;
   object-fit: contain;
