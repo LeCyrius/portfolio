@@ -54,6 +54,8 @@ body {
   backdrop-filter: blur(18px);
   background: linear-gradient(to bottom, rgba(5, 8, 22, 0.95), rgba(5, 8, 22, 0.7), transparent);
   border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+  padding-top: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav-container {
@@ -823,7 +825,7 @@ body {
 
   .nav {
     position: absolute;
-    inset: 72px 1.5rem auto 1.5rem;
+    inset: 92px 1.5rem auto 1.5rem;
     background: rgba(15, 23, 42, 0.98);
     border-radius: 14px;
     border: 1px solid rgba(31, 41, 55, 0.9);
