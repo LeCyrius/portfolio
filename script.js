@@ -472,12 +472,10 @@ function setLanguage(lang) {
     }
   });
 
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.classList.remove("active");
-    if (btn.dataset.lang === lang) {
-      btn.classList.add("active");
-    }
-  });
+  const langToggle = document.getElementById("lang-toggle");
+  if (langToggle) {
+    langToggle.checked = lang === "en";
+  }
 
   document.documentElement.lang = lang;
   
@@ -495,11 +493,13 @@ function detectBrowserLanguage() {
 }
 
 function setupLanguageSwitcher() {
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      setLanguage(btn.dataset.lang);
+  const langToggle = document.getElementById("lang-toggle");
+  if (langToggle) {
+    langToggle.checked = currentLanguage === "en";
+    langToggle.addEventListener("change", () => {
+      setLanguage(langToggle.checked ? "en" : "fr");
     });
-  });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

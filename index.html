@@ -34,8 +34,18 @@
         <a href="#contact" data-i18n="nav-contact">Contact</a>
       </nav>
       <div class="language-switcher">
-        <button class="lang-btn active" data-lang="fr">FR</button>
-        <button class="lang-btn" data-lang="en">EN</button>
+        <div class="uiverse-wrapper">
+          <span class="lang-label" aria-hidden="true">FR</span>
+          <label class="pill-toggle">
+            <input type="checkbox" id="lang-toggle" aria-label="Changer de langue" />
+            <div class="track">
+              <div class="pill">
+                <div class="pill-surface"></div>
+              </div>
+            </div>
+          </label>
+          <span class="lang-label" aria-hidden="true">EN</span>
+        </div>
       </div>
       <button class="nav-toggle" aria-label="Ouvrir le menu" data-i18n-aria-label="nav-toggle-label">
         <span></span><span></span><span></span>
